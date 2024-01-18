@@ -10,7 +10,7 @@
 
 <body>
   <div class="navbar">
-    <div class="header-inner-content">
+    <div class="header-inner-content show-menu">
       <h3 class="logo"> VKS <span>SUPLEMENTOS</span></h3>
       <nav>
         <ul>
@@ -22,28 +22,58 @@
         </ul>
       </nav>
       <div class="nav-icon-container">
-        <img src="./imagens/cart.png">
-        <img src="./imagens/menu.png" class="menu-botton" ">
+        <img src="./imagens/cart.png" />
+        <img src="./imagens/menu.png" class="menu-bottom" />
       </div>
     </div>
   </div>
 
-  <header> 
+  <header>
     <div class=" header--inner-content">
-        <div class="header-bottom-side">
-          <div class="header-bottom-side-left">
-            <h2>Os melhores suplementos estão aqui!</h2>
-            <p>Sua Loja Online de Suplementos
-              Entregas para todo Brasil.s
-              Mais de 50 marcas nacionais e importadas.
-              Varejo/Atacado.
-            </p>
-            <button>Veja Agora &#8594;</button>
-          </div>
-          <div class="header-bottom-side-right"> <img src="./imagens/Fundo transp. Letra Preta.png"></>
-          </div>
+      <div class="header-bottom-side">
+        <div class="header-bottom-side-left">
+          <h2>Os melhores suplementos estão aqui!</h2>
+          <p>Sua Loja Online de Suplementos
+            Entregas para todo Brasil.s
+            Mais de 50 marcas nacionais e importadas.
+            Varejo/Atacado.
+          </p>
+          <button>Veja Agora &#8594;</button>
         </div>
-        </header>
+        <div class="header-bottom-side-right">
+          <img src="./imagens/gaming-msi-header.png" alt="" />
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content-->
+
+  <main>
+    <div class="gray-background">
+      <div class="page-inner-content">
+        <div class="cols cols-3">
+          <img src="/imagens/products/product-1.png" alt="" />
+          <img src="/imagens/products/product-2.png" alt="" />
+          <img src="/imagens/products/product-3.png" alt="" />
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div>
+    <div class="page-inner-content">
+      <h3 class="section-tittle">Produtos Selecionados</h3>
+      <div class="subtitle-underline"></div>
+      <div></div>
+    </div>
+  </div>
+
+  <script>
+    const navbar = document.querySelector(" .navbar"); const menuBottom = document.querySelector(".menu-bottom"); menuBottom.addEventListener("click", () => {
+      navbar.classList.toggle("show-menu");
+    });
+  </script>
 </body>
 
 </html>
