@@ -8,8 +8,14 @@ body {
   font-family: "arial";
 }
 
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 .header-inner-content {
-  max-width: 1100px;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -31,7 +37,7 @@ body {
 }
 
 .logo {
-  color: black;
+  color: rgb(250, 5, 5);
 }
 
 .logo span {
@@ -73,6 +79,89 @@ nav ul li:hover {
 .menu-bottom {
   display: none;
 }
+
+/* Carrosel */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  position: relative;
+  /* padding: 15px; */
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.gallery-wrapper {
+  overflow-x: auto;
+}
+
+.arrow-left,
+.arrow-right {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: auto;
+  bottom: 0;
+  font-size: 20px;
+  line-height: 250px;
+  width: 40px;
+  color: #fff;
+  transition: all 600ms ease-in-out;
+  background: linear-gradient(to left, transparent 0%, black 200%);
+  opacity: 0.1;
+  cursor: pointer;
+  border: none;
+}
+
+.arrow-left:hover,
+.arrow-right:hover {
+  opacity: 1;
+}
+
+.arrow-right {
+  right: 0;
+  left: auto;
+  text-align: right;
+  background: linear-gradient(to right, transparent 0%, black 200%);
+}
+
+.gallery {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 15px;
+}
+
+.carrosel {
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  transition: all 600ms ease-in-out;
+  opacity: 0.5;
+}
+
+.current-item {
+  opacity: 1;
+}
+
+/* This is from w3schools */
+/* 
+https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp */
+/* Hide scrollbar for Chrome, Safari and Opera */
+.gallery-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.gallery-wrapper {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Carrosel */
 
 header {
   background-image: radial-gradient(#fff, #e7e7e7);
@@ -350,10 +439,11 @@ main {
 /* Footer */
 
 .footer-content {
-  display: flex;
-  align-items: center;
+  /* display: flex; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   color: #fff;
-  padding: 4rem 1rem;
+  padding: 4rem 2rem;
   gap: 2rem;
 }
 
@@ -367,7 +457,7 @@ main {
 }
 
 .download-options > div {
-  display: flex;
+  /* display: flex; */
 }
 
 .download-options > div img {
@@ -376,6 +466,7 @@ main {
 
 .logo-footer {
   text-align: center;
+  align-items: center;
 }
 
 .links-footer h3 {
